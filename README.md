@@ -45,7 +45,7 @@ This repository contains solutions for two machine learning problems, focused on
    data = pd.read_csv(url)
    data.describe()
 
-2. **Build a Linear Regression Model:
+2. **Build a Linear Regression Model:**
    ``` python
    from sklearn.model_selection import train_test_split
    from sklearn.linear_model import LinearRegression
@@ -55,13 +55,13 @@ This repository contains solutions for two machine learning problems, focused on
    lr = LinearRegression()
    lr.fit(X_train, y_train)
 
-3. **Evaluate the Model:
+3. **Evaluate the Model:**
    ```python
    from sklearn import metrics
    y_pred = lr.predict(X_test)
    print('MAE:', metrics.mean_absolute_error(y_test, y_pred))
 
-4. **Examine Scaling:
+4. **Examine Scaling:**
    ```python
    from sklearn.preprocessing import StandardScaler
    std_scaler = StandardScaler()
@@ -69,14 +69,14 @@ This repository contains solutions for two machine learning problems, focused on
    X_train_scaled = std_scaler.transform(X_train)
    X_test_scaled = std_scaler.transform(X_test)
 
-5. ***L2 Regularization:
+5. ***L2 Regularization:**
    ```python
    from sklearn.linear_model import Ridge
    alpha_values = [0.01, 0.1, 1, 10, 100]
    for alpha in alpha_values:
        ridge_scale = Ridge(alpha=alpha).fit(X_train_scaled, y_train)
 
-6. ***L1 Regularization:
+6. ***L1 Regularization:**
    ```python
    from sklearn.linear_model import Lasso
    for alpha in alpha_values:
@@ -128,11 +128,11 @@ The analysis concludes that regularization methods do not significantly improve 
    data = pd.read_csv(url)
    data.describe()
 
-2. **Count the Number of Observations:
+2. **Count the Number of Observations:**
    ```python
    print("The number of observations are", data.shape[0])
 
-3. **Build a Logistic Regression Model:
+3. **Build a Logistic Regression Model:**
    ```python
    from sklearn.model_selection import train_test_split
    from sklearn.linear_model import LogisticRegression
@@ -142,13 +142,13 @@ The analysis concludes that regularization methods do not significantly improve 
    lr = LogisticRegression()
    lr.fit(X_train, y_train)
 
-4. **Evaluate the Model:
+4. **Evaluate the Model:**
    ```python
    from sklearn import metrics
    y_pred = lr.predict(X_test)
    print('Accuracy:', metrics.accuracy_score(y_test, y_pred))
 
-5. **Examine Scaling:
+5. **Examine Scaling:**
    ```python
    from sklearn.preprocessing import StandardScaler
    std_scaler = StandardScaler()
@@ -156,7 +156,7 @@ The analysis concludes that regularization methods do not significantly improve 
    X_train_scaled = std_scaler.transform(X_train)
    X_test_scaled = std_scaler.transform(X_test)
 
-6. **L2 Regularization (Ridge Classifier):
+6. **L2 Regularization (Ridge Classifier):**
    ```python
    from sklearn.linear_model import RidgeClassifier
    alpha_values = [0.01, 0.1, 1, 10, 100]
@@ -166,7 +166,7 @@ The analysis concludes that regularization methods do not significantly improve 
        y_pred_ridge = ridge.predict(X_test_scaled)
        print(f'Alpha: {alpha}, Accuracy: {metrics.accuracy_score(y_test, y_pred_ridge)}')
 
-7. **L1 Regularization (Lasso Classifier):
+7. **L1 Regularization (Lasso Classifier):**
    ```python
    from sklearn.linear_model import Lasso
    for alpha in alpha_values:
