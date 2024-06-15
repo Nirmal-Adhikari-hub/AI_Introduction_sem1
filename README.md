@@ -82,7 +82,7 @@ This repository contains solutions for two machine learning problems, focused on
    for alpha in alpha_values:
        lasso_scale = Lasso(alpha=alpha).fit(X_train_scaled, y_train)
 
-##Conclusion:
+## Conclusion:
 The analysis concludes that regularization methods do not significantly improve the model fit for this dataset.
 
 
@@ -176,7 +176,7 @@ The analysis concludes that regularization methods do not significantly improve 
        y_pred_lasso_binary = [1 if pred >= 0.5 else 0 for pred in y_pred_lasso]
        print(f'Alpha: {alpha}, Accuracy: {metrics.accuracy_score(y_test, y_pred_lasso_binary)}')
 
-##Conclusion:
+## Conclusion:
 The analysis concludes that scaling and regularization methods didn't help improve the accuracy of the logistic regression model for this dataset. Different values of alpha in L2 and L1 regularization were tested to find the best model fit.
 
 
